@@ -1,0 +1,12 @@
+{
+    "Hostname": "",
+    "Domainname": "",
+    "User": "",
+    "Image": "lwilts/rails_signup_download_demo:BUILD_NUMBER",
+    "ExposedPorts": {
+        "8080/tcp": {}
+    },
+    "HostConfig": {
+        "PortBindings": { "8080/tcp": [{ "HostPort": "8888" }] }
+    }
+}
