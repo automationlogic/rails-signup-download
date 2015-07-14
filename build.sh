@@ -27,7 +27,7 @@ fi
 #docker build -t lwilts/rails_signup_download_demo:$1 .
 echo "*** Building dockerfile ***"
 tar zcf dockerfile.tar.gz ./
-http_response=$(curl -w "\n%{http_code}\n" --verbose --request POST -H "Content-Type:application/tar" --data-binary '@dockerfile.tar.gz' "http://$DEV_IP:2376/build?nocache=true&t=lwilts/rails_signup_download_demo:$2$1" | tail -1)
+http_response=$(curl -w "\n%{http_code}\n" --verbose --request POST -H "Content-Type:application/tar" --data-binary '@dockerfile.tar.gz' "http://$DEV_IP:2376/build?t=lwilts/rails_signup_download_demo:$2$1" | tail -1)
 if [ $http_response != "200" ]
 then
     echo "Failed to build dockerfile."
