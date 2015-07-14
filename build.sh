@@ -24,7 +24,6 @@ else
     exit 1
 fi
 
-mvn clean package
 #docker build -t lwilts/rails_signup_download_demo:$1 .
 echo "*** Building dockerfile ***"
 tar zcf dockerfile.tar.gz ./
