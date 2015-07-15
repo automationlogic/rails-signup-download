@@ -7,6 +7,10 @@
         "3000/tcp": {}
     },
     "HostConfig": {
+        "Binds": ["/root/rails_docker/app/db/:/usr/src/app/db/"],
         "PortBindings": { "3000/tcp": [{ "HostPort": "3000" }] }
+    },
+    "Volumes": {
+        "/usr/src/app/db/": {}
     }
 }
