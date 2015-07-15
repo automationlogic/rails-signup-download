@@ -7,10 +7,10 @@
         "3000/tcp": {}
     },
     "HostConfig": {
-        "Binds": ["/root/rails_docker/app/db/:/usr/src/app/db/"],
+        "Binds": ["/root/rails_docker/development.sqlite3:/usr/src/app/db/development.sqlite3"],
         "PortBindings": { "3000/tcp": [{ "HostPort": "3000" }] }
     },
     "Volumes": {
-        "/usr/src/app/db/": {}
+        "/usr/src/app/db/development.sqlite3": {}
     }
 }
